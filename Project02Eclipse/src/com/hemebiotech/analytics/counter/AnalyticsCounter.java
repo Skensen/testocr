@@ -5,19 +5,19 @@ import java.util.Map;
 
 public class AnalyticsCounter implements ISymptomCounter {
 
-	private List<String> listOfSymptoms;
+	private List<String> listeDesSymptomes;
 
-	public AnalyticsCounter(List<String> listOfSymptoms) {
-		this.listOfSymptoms = listOfSymptoms;
+	public AnalyticsCounter(List<String> listeDesSymptomes) {
+		this.listeDesSymptomes = listeDesSymptomes;
 	}
 
 	@Override
-	public Map<String, Integer> symptomCounter() {
+	public Map<String, Integer> compteSymptome() {
 		Map<String, Integer> result = new HashMap<String, Integer>();
 		int counter = 0;
-		for (String symptom : listOfSymptoms) {
-			for (int i = 0; i < listOfSymptoms.size(); i++) {
-				if (symptom.equals(listOfSymptoms.get(i))) {
+		for (String symptom : listeDesSymptomes) {
+			for (int i = 0; i < listeDesSymptomes.size(); i++) {
+				if (symptom.equals(listeDesSymptomes.get(i))) {
 					counter++;
 				}
 			}
@@ -28,5 +28,4 @@ public class AnalyticsCounter implements ISymptomCounter {
 		}
 		return result;
 	}
-
 }

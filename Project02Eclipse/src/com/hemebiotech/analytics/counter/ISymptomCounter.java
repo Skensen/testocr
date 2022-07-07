@@ -3,6 +3,6 @@ import java.util.Map;
 
 public interface ISymptomCounter {
 
-	Map<String, Integer> symptomCounter();
+	Map<String, Integer> compteSymptome();
 
 }

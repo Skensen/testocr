@@ -18,7 +18,7 @@ public class WriteSymptomDataFromfile implements ISymptomWriter {
         this.filepath = filepath;
     }
     @Override
-    public void writeSymptoms() {
+    public void nombreSymptomes() {
 
         Map<String, Integer> orderedSymptomsCount = orderSymptomsCount();
 

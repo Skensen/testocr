@@ -12,14 +12,14 @@ public class Main {
 
         /** Lecture des symptômes */
         ReadSymptomDataFromFile readSymptomDataFromFile = new ReadSymptomDataFromFile("Project02Eclipse/src/symptoms.txt");
-        List<String> listOfSymptoms = readSymptomDataFromFile.getSymptoms();
+        List<String> listOfSymptoms = readSymptomDataFromFile.donneSymptomes();
 
         /** Compte les symptômes de la liste */
         AnalyticsCounter analyticsCounter = new AnalyticsCounter(listOfSymptoms);
-        Map<String, Integer> symptomCounter = analyticsCounter.symptomCounter();
+        Map<String, Integer> symptomCounter = analyticsCounter.compteSymptome();
 
         /** Ecrit le nombre des symptômes */
         WriteSymptomDataFromfile symptomsCountFile = new WriteSymptomDataFromfile(symptomCounter, "result.out");
-        symptomsCountFile.writeSymptoms();
+        symptomsCountFile.nombreSymptomes(); // Calcule le nombre de répercution de chaques symptômes
     }
 }
