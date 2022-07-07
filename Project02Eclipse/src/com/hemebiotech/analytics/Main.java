@@ -12,10 +12,10 @@ public class Main {
 
         /** Lecture des symptômes */
         ReadSymptomDataFromFile readSymptomDataFromFile = new ReadSymptomDataFromFile("Project02Eclipse/src/symptoms.txt");
-        List<String> listOfSymptoms = readSymptomDataFromFile.donneSymptomes();
+        List<String> listeDesSymptomes = readSymptomDataFromFile.donneSymptomes();
 
         /** Compte les symptômes de la liste */
-        AnalyticsCounter analyticsCounter = new AnalyticsCounter(listOfSymptoms);
+        AnalyticsCounter analyticsCounter = new AnalyticsCounter(listeDesSymptomes);
         Map<String, Integer> symptomCounter = analyticsCounter.compteSymptome();
 
         /** Ecrit le nombre des symptômes */
